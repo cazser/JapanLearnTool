@@ -6,11 +6,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
+    <h1>练习</h1>
+    <form id="form">
+        <span id="prompt">中国人</span>
+        <input id="input" type="text">
+        <button>提交</button>
+    </form>
+    <img class="img" src="../img/right.jpeg"">
     <details>
     <summary>
         五十音图
     </summary>
+    <table>
+        <thead></thead>
+        <tbody>
+            <tr>
+            <td>あ</td>
+            <td>い</td>
+            <td>う</td>
+            <td>え</td>
+            <td>お</td>
+            </tr>
+        </tbody>
+    </table>
+    
     </details>
+<script>
+    let words = {
+        'ちゅうごくじん':"中国人",
+        'ちゅうごくじ':"中国人",}
+    let form = document.querySelector("#form");
+    let prompt = document.querySelector("#prompt");
+    let input = document.querySelector("#input");
+    form.addEventListener("submit", (e)=>{
+        console.log(prompt.textContent);
+        console.log(input.value)
+        console.log(words[input.value])
+        if(words[input.value] === prompt.textContent){
+            
+        }else{
+            console.log("no")
+        }
+        e.preventDefault();
+    })
+</script>
 </body>
 </html>
