@@ -15,9 +15,11 @@ button{
     user-select: none;
 }
 
-input{
+#input{
   height: 32px;
   border-radius: 8px;
+  padding: 6px;
+  margin: 12px;
 }
 
 .weui-mask_transparent {

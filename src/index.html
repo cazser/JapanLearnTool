@@ -50,13 +50,17 @@
     
     </details>
 <script>
+
+
     function getRandomInt(max) {
   return Math.floor(Math.random() * max);
 }
     let words = {
         'ちゅうごくじん':"中国人",
         'ちゅうごくじ':"中国人",
-        'にほんじん': "日本人"}
+        'にほんじん': "日本人",
+        'かんこくじん':'韩国人'
+    }
     let form = document.querySelector("#form");
     let prompt = document.querySelector("#prompt");
     let input = document.querySelector("#input");
@@ -65,7 +69,13 @@
         if(words[input.value] === prompt.textContent){
             let toast = document.querySelector("#toast");
             toast.classList.remove("toast");
-            setTimeout(()=>{
+            const synUtterance = new window.SpeechSynthesisUtterance();
+            synUtterance.text = input.value;
+            synUtterance.lang = "ja-JP";
+            synUtterance.pitch = 2; //音调高低0～2，默认1
+            synUtterance.rate = 1;
+            window.speechSynthesis.speak(synUtterance);
+           setTimeout(()=>{
                 toast.classList.add("toast")
             },300)    
         }else{ 
