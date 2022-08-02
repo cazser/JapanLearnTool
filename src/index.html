@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
     <title>Document</title>
 </head>
 
@@ -14,7 +15,13 @@
         <input id="input" type="text">
         <button>提交</button>
     </form>
-    <img class="img" src="../img/right.jpeg"">
+    <div role="alert" id="toast" style="/* display: none; */">
+        <div class="weui-mask_transparent"></div>
+        <div class="weui-toast">
+            <i class="weui-icon-success-no-circle weui-icon_toast"></i>
+            <p class="weui-toast__content">已完成</p>
+        </div>
+    </div>
     <details>
     <summary>
         五十音图
