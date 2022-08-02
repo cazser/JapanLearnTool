@@ -59,7 +59,8 @@
         'ちゅうごくじん':"中国人",
         'ちゅうごくじ':"中国人",
         'にほんじん': "日本人",
-        'かんこくじん':'韩国人'
+        'かんこくじん':'韩国人',
+        'アメリかじん':'美国人'
     }
     let form = document.querySelector("#form");
     let prompt = document.querySelector("#prompt");
@@ -89,6 +90,7 @@
         const keys =  Object.keys(words);
         let random = getRandomInt( keys.length);
         prompt.textContent =words[ keys[random]];
+        input.value ="";
         e.preventDefault();
     })
 </script>
