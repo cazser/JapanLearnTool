@@ -10,6 +10,7 @@
 
 <body>
     <h1>练习</h1>
+    <p>填写对应的日语</p>
     <form id="form">
         <span id="prompt">中国人</span>
         <input id="input" type="text">
@@ -49,9 +50,13 @@
     
     </details>
 <script>
+    function getRandomInt(max) {
+  return Math.floor(Math.random() * max);
+}
     let words = {
         'ちゅうごくじん':"中国人",
-        'ちゅうごくじ':"中国人",}
+        'ちゅうごくじ':"中国人",
+        'にほんじん': "日本人"}
     let form = document.querySelector("#form");
     let prompt = document.querySelector("#prompt");
     let input = document.querySelector("#input");
@@ -69,8 +74,11 @@
             setTimeout(()=>{
                 toast.classList.add("toast")
             },300)   
-            console.log("no")
+           // console.log("no")
         }
+        const keys =  Object.keys(words);
+        let random = getRandomInt( keys.length);
+        prompt.textContent =words[ keys[random]];
         e.preventDefault();
     })
 </script>
