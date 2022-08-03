@@ -1,3 +1,11 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+*::after, *::before{
+    margin: 0;
+    padding: 0;
+}
 button{
     margin-left: auto;
     margin-right: auto;
@@ -124,3 +132,19 @@ button{
 }
 
 
+.inputPad{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.inputPad >li{
+    border: 1px solid;
+    width: 25%;
+    padding: 8px;
+}
+
+.inputPad >li:hover{
+    background: greenyellow;
+}
